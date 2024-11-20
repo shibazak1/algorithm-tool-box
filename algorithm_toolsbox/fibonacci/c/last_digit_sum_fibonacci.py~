@@ -1,0 +1,31 @@
+# last digit of sum of fibonacci number :
+#defin as  S(n) = F(0)+F(1)+....+F(n-1)+F(n)
+#last Digit of sum  is S(n) mod 10
+#we find that S(n)= F(n+2)-1
+
+# written by viibug
+#at 2024/8/13
+
+#----------------------------------------------------------------------------------------------------------------#
+#                                       Last Digit Of Sum Of Fibonacci                                           #
+#----------------------------------------------------------------------------------------------------------------#
+
+
+def LastDigitFibonacci(n):
+    current , next = 0,1
+
+    for _ in range(n):
+
+        current ,next = next,(current+next)%10
+
+        return current
+
+
+
+
+
+
+n = int(input("Enter n :"))
+
+d =LastDigitFibonacci(((n+2)%60)%10)
+print(d)

@@ -1,0 +1,40 @@
+'''
+Maximizing the Value of the Loot Problem
+--------------------------
+Find the maximal value of items that fit into the
+backpack.
+
+Input: The capacity of a back-pack W as well as the weights
+(w1 , . . . , wn ) and costs (c1 , . . . , cn ) of n different compounds.
+
+Output: The maximum total value of fractions of items that fit into the
+backpack of the given capacity: i.e.,
+
+the maximum value of c1 ·f1 +· · ·+cn ·
+fn such that w1 · f1 + · · · + wn · fn ≤ W
+and 0 ≤ fi ≤ 1 for all i (fi is the fraction of the i-th item taken to the
+backpack).
+'''
+
+
+def MaximumeLoots(W,wights,costs):
+    pass
+
+
+
+
+
+
+
+
+
+n,capacity_bag = int(input().split())
+costs = [0]*n
+wights = [0]*n
+
+for i in range(n):
+    wights[i],costs[i] = int(input().split())
+
+    
+
+

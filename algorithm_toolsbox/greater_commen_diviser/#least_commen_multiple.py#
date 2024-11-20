@@ -1,0 +1,22 @@
+#find least commen multiple of a,b is the smallest intager m that is divisible by a and b
+from math import gcd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+a, b = map(int, input().split())
+print(a * b // gcd(a, b))

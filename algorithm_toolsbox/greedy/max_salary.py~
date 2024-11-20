@@ -1,0 +1,39 @@
+
+"""
+Largest Concatenate Problem
+Compile the largest number by concatenating the given numbers.
+
+Input: A sequence of positive integers.
+
+Output: The largest number that can be obtained by concatenating the given integers in some order.
+
+-------------------------------------------------------------------------------------------------
+Input format. The first line of the input contains an integer n. The second
+line contains integers a1 , . . . , an .
+
+Output format. The largest number that can be composed out of a1 , . . . , an .
+Constraints. 1 ≤ n ≤ 100; 1 ≤ ai ≤ 103 for all 1 ≤ i ≤ n.
+"""
+#(3,23) 323 > 233
+def IsBetter(a,b):
+
+    if a + b >= b + a:
+        return a
+    return b
+
+
+def LargestConcatenate(nums):
+
+    largest_number = ""
+    while len(nums)>0:
+
+        for i in range(len(nums)):
+
+            max_num = IsBetter(nums[i],nums[i+1])
+        largest_number += max_num
+        nums.remove(max_num)
+            
+    return largest_number
+
+
+

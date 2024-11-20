@@ -1,0 +1,26 @@
+
+
+
+"""
+Distinct Summands Problem
+Represent a positive integer as the sum of the maximum number of pairwise distinct positive integers.
+Input: A positive integer n
+.
+Output: The maximum k such that n can be represented as the sum a1 + · · · + ak of k distinct positive integers.
+"""
+
+
+def MaxOfK(n):
+
+    knum = []
+    a = 0
+    while sum(knum) <= n:
+        knum.append(a+=1)
+
+    return knum
+
+
+n = input("enter n:")
+print(MaxOfK(n))
+
+    

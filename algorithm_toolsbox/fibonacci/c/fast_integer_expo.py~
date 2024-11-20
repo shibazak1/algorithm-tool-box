@@ -1,0 +1,22 @@
+# how to find the   x^n in O(log n) time
+# writen by viibug
+# 2024/8/11
+
+
+def FastIntegerExponentiation(x,n):
+
+    if n==0:
+        return 1
+
+    elif n%2==0:
+        y = FastIntegerExponentiation(x,n/2)
+        return y*y
+    else:
+        y = FastIntegerExponentiation(x,n-1)
+        return y*x
+
+
+    
+        
+
+

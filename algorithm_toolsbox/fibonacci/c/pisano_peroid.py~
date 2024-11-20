@@ -1,0 +1,28 @@
+#find the pisano peroid (the length of sequens of Fi mod m)
+
+#written by viibug
+
+# 2024/8/7
+
+
+
+def PisanoPeroid(modulus):
+
+    a =0
+    b= 1
+    count = 0
+    
+    while True:
+        
+        a , b = a+b % modulus , a
+        count +=1
+        if a==0 and b == 1:
+            return count
+
+
+
+m = int(input("Enter Modulus : "))
+
+print(PisanoPeroid(m))
+
+

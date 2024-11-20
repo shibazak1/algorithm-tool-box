@@ -1,0 +1,54 @@
+#celebration party statte that :
+#if you have n children can you groupe this children into minimum number of group
+#with constrain that no tow children with age gap more than 2 years
+
+
+#it turn out that this problem is simuler to point cover by segemnt problem
+#what is the minimum number of segemnt of leangth  needed to cover n point
+
+def PointsCoverSorted(points):
+    segments = []
+    left = points[0]
+    segment = (left,left+2)
+
+    for point in points:
+        if point >= left and point <= segment_left+2:
+            continue
+        else:
+            segments.append((segment_left,segment_left+2))
+            segment_left = point
+
+    return segments
+
+
+#-------------------------------------------------------------
+
+
+def PointsCoverSorted2(points):
+    segments = []
+    left  = 0
+
+    while left < len(points):
+        x_left = points[left]
+        x_right = points[left]+2
+        
+        segment = (x_left,x_right)
+        segments.append(segment)
+        left += 1
+        
+        while left < len(points) and points[left] <= x_right:
+            left += 1
+    return segments
+            
+        
+        
+
+
+            
+
+points = [2,4,5,6,7,8]
+print(PointsCoverSorted2(points))
+    
+
+
+
